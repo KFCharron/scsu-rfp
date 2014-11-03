@@ -1,1 +1,1 @@
-controller.js
+console.log("JavaScript File Successfully Loaded.");

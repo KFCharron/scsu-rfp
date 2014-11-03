@@ -1,141 +1,136 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css" />
-	<title>Request For Proposal</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Request For Proposal</title>
+  </head>
+  <body>
+    <form action="" method="post" class="dark-matter">
+      <h1>SCSU Request For Proposal
+        <span> Please fill out the entire form.</span>
+      </h1>
 
-<body>
-<form action="" method="post" class="dark-matter">
-	<h1>SCSU Request For Proposal
-		<span> Please fill out the entire form.</span>
-	</h1>
+      <legend>Contact Information</legend>
+      <br>
+      <label>
+          <span>First Name :</span>
+          <input id="firstName" type="text" name="firstName" placeholder="Your First Name" />
+      </label>
 
-	<legend>Contact Information</legend>
-	<br>
-	<label>
-			<span>First Name :</span>
-			<input id="firstName" type="text" name="firstName" placeholder="Your First Name" />
-	</label>
+      <label>
+          <span>Last Name :</span>
+          <input id="lastName" type="text" name="lastName" placeholder="Your Last Name" />
+      </label>
 
-	<label>
-			<span>Last Name :</span>
-			<input id="lastName" type="text" name="lastName" placeholder="Your Last Name" />
-	</label>
+      <label>
+          <span>E-mail Address :</span>
+          <input id="emailAddress" type="email" name="emailAddress" placeholder="Your email address" />
+      </label>
 
-	<label>
-			<span>E-mail Address :</span>
-			<input id="emailAddress" type="email" name="emailAddress" placeholder="Your email address" />
-	</label>
+      <label>
+          <span>Phone Number :</span>
+          <input id="phoneNumber" type="tel" name="phoneNumber" placeholder="Your telephone Number" />
+      </label>
 
-	<label>
-			<span>Phone Number :</span>
-			<input id="phoneNumber" type="tel" name="phoneNumber" placeholder="Your telephone Number" />
-	</label>
+      <label>
+          <span>Streen Address :</span>
+          <input id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
+      </label>
 
-	<label>
-			<span>Streen Address :</span>
-			<input id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
-	</label>
+      <label>
+          <span>City :</span>
+          <input id="city" type="text" name="city" placeholder="Your city" />
+      </label>
 
-	<label>
-			<span>City :</span>
-			<input id="city" type="text" name="city" placeholder="Your city" />
-	</label>
-
-	<!-- this needs to be a selection with all 50 state, will do this later on 
-	<label>
-			<span>State :</span>
-			<input id="state" type="text" name="state" placeholder="state" />
-	</label> -->
+      <!-- this needs to be a selection with all 50 state, will do this later on 
+      <label>
+          <span>State :</span>
+          <input id="state" type="text" name="state" placeholder="state" />
+      </label> -->
 
 
-	<legend>Classroom Information</legend>
-	<br>
-	<label>
-			<span>Number of classrooms: </span>
-			<input id="numberClassrooms" type="number" name="numberClassrooms" />
-	</label>
+      <legend>Classroom Information</legend>
+      <br>
+      <label>
+          <span>Number of classrooms: </span>
+          <input id="numberClassrooms" type="number" name="numberClassrooms" />
+      </label>
 
-	<label>
-			<span>Number of seats: </span>
-			<input id="numberSeats" type="number" name="numberSeats" />
-	</label>
+      <label>
+          <span>Number of seats: </span>
+          <input id="numberSeats" type="number" name="numberSeats" />
+      </label>
 
-	<label>
-			<span>Classroom dimensions: </span>
-			<input id="height" type="number" name="height" placeholder="height"/>
-			<span>&nbsp;</span>
-			<input id="width" type="number" name="width" placeholder="width"/>
-			<span>&nbsp;</span>
-			<input id="length" type="number" name="length" placeholder="length"/>
-	</label>
+      <label>
+          <span>Classroom dimensions: </span>
+          <input id="height" type="number" name="height" placeholder="height"/>
+          <span>&nbsp;</span>
+          <input id="width" type="number" name="width" placeholder="width"/>
+          <span>&nbsp;</span>
+          <input id="length" type="number" name="length" placeholder="length"/>
+      </label>
 
-	<label>
-			<span>Classroom style: </span>
-			<br>
-			<input type="radio" name="classroomStyle" value="lectureHall">Lecture Hall
-			<input type="radio" name="classroomStyle" value="traditional">Traditional		
-	</label>	
-	<br>
-	<label>
-			<span>Instructor Podium :</span>
-			<br>
-			<input type="checkbox" name="instuctorPodium" value="mac">Mac
-			<input type="checkbox" name="instuctorPodium" value="pc">PC
-	</label>
+      <label>
+          <span>Classroom style: </span>
+          <br>
+          <input type="radio" name="classroomStyle" value="lectureHall">Lecture Hall
+          <input type="radio" name="classroomStyle" value="traditional">Traditional   
+      </label>  
+      <br>
+      <label>
+          <span>Instructor Podium :</span>
+          <br>
+          <input type="checkbox" name="instuctorPodium" value="mac">Mac
+          <input type="checkbox" name="instuctorPodium" value="pc">PC
+      </label>
 
-	<label>
-			<br>
-			<span>Projection System:</span>
-			<input type="checkbox" name="projectionSystem" value="ceiling">Ceiling mounted
-			<input type="checkbox" name="projectionSystem" value="flatPanel">Flatpanel
-			<br>
-			<input type="checkbox" name="projectionSystem" value="chalkboard">Chalkboard
-			<input type="checkbox" name="projectionSystem" value="dryerase">Dry Erase
-	</label>
+      <label>
+          <br>
+          <span>Projection System:</span>
+          <input type="checkbox" name="projectionSystem" value="ceiling">Ceiling mounted
+          <input type="checkbox" name="projectionSystem" value="flatPanel">Flatpanel
+          <br>
+          <input type="checkbox" name="projectionSystem" value="chalkboard">Chalkboard
+          <input type="checkbox" name="projectionSystem" value="dryerase">Dry Erase
+      </label>
 
-	<label>
-			<span>Multimedia System :</span>
-			<br>
-			<input type="checkbox" name="multSystem" value="vcr">VCR
-			<input type="checkbox" name="multSystem" value="dvd">DVD
-			<input type="checkbox" name="multSystem" value="blueray">Blue-Ray
-	</label>
+      <label>
+          <span>Multimedia System :</span>
+          <br>
+          <input type="checkbox" name="multSystem" value="vcr">VCR
+          <input type="checkbox" name="multSystem" value="dvd">DVD
+          <input type="checkbox" name="multSystem" value="blueray">Blue-Ray
+      </label>
 
-	<label>
-			<br>
-			<span>High Quality Audio :</span>
-			<br>
-			<input type="radio" name="highQualityAudio" value="yes">Yes
-			<input type="radio" name="highQualityAudio" value="no">No
-	</label>
+      <label>
+          <br>
+          <span>High Quality Audio :</span>
+          <br>
+          <input type="radio" name="highQualityAudio" value="yes">Yes
+          <input type="radio" name="highQualityAudio" value="no">No
+      </label>
 
-	<label>
-			<span>Max Budget:</span>
-			<input id="maxBudget" type="number" name="maxBudget" />
-	</label>	
+      <label>
+          <span>Max Budget:</span>
+          <input id="maxBudget" type="number" name="maxBudget" />
+      </label>  
 
-	<label>
-			<span>Completion Date :</span>
-			<input id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
-	</label>
+      <label>
+          <span>Completion Date :</span>
+          <input id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
+      </label>
 
-	<label>
-			<span>Summary :</span>
-			<textarea id="summary" name="summary" placeholder="Description of the RFP ..."></textarea>
-	</label>
+      <label>
+          <span>Summary :</span>
+          <textarea id="summary" name="summary" placeholder="Description of the RFP ..."></textarea>
+      </label>
 
-	<label>
-	        <span>&nbsp;</span>
-	        <input type="button" class="button" value="Send" />
-    </label>
-
-
-
-
-</form>
-
-</body>
+      <label>
+              <span>&nbsp;</span>
+              <input type="button" class="button" value="Send" />
+        </label>
+    </form>
+  </body>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script language="javascript" type="text/javascript" src="controller.js"></script>
 </html>
