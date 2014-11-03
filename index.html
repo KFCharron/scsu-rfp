@@ -5,7 +5,7 @@
     <title>Request For Proposal</title>
   </head>
   <body>
-    <form action="" method="post" class="dark-matter">
+    <form id="form" action="" method="post" class="dark-matter" data-parsley-validate>
       <h1>SCSU Request For Proposal
         <span> Please fill out the entire form.</span>
       </h1>
@@ -14,32 +14,32 @@
       <br>
       <label>
           <span>First Name :</span>
-          <input id="firstName" type="text" name="firstName" placeholder="Your First Name" />
+          <input required id="firstName" type="text" name="firstName" placeholder="Your First Name" />
       </label>
 
       <label>
           <span>Last Name :</span>
-          <input id="lastName" type="text" name="lastName" placeholder="Your Last Name" />
+          <input required id="lastName" type="text" name="lastName" placeholder="Your Last Name" />
       </label>
 
       <label>
           <span>E-mail Address :</span>
-          <input id="emailAddress" type="email" name="emailAddress" placeholder="Your email address" />
+          <input required id="emailAddress" type="email" name="emailAddress" placeholder="Your email address" />
       </label>
 
       <label>
           <span>Phone Number :</span>
-          <input id="phoneNumber" type="tel" name="phoneNumber" placeholder="Your telephone Number" />
+          <input required id="phoneNumber" type="tel" name="phoneNumber" placeholder="Your telephone Number" />
       </label>
 
       <label>
           <span>Streen Address :</span>
-          <input id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
+          <input required id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
       </label>
 
       <label>
           <span>City :</span>
-          <input id="city" type="text" name="city" placeholder="Your city" />
+          <input required id="city" type="text" name="city" placeholder="Your city" />
       </label>
 
       <!-- this needs to be a selection with all 50 state, will do this later on 
@@ -53,21 +53,21 @@
       <br>
       <label>
           <span>Number of classrooms: </span>
-          <input id="numberClassrooms" type="number" name="numberClassrooms" />
+          <input required id="numberClassrooms" type="number" name="numberClassrooms" />
       </label>
 
       <label>
           <span>Number of seats: </span>
-          <input id="numberSeats" type="number" name="numberSeats" />
+          <input required id="numberSeats" type="number" name="numberSeats" />
       </label>
 
       <label>
           <span>Classroom dimensions: </span>
-          <input id="height" type="number" name="height" placeholder="height"/>
+          <input required id="height" type="number" name="height" placeholder="height"/>
           <span>&nbsp;</span>
-          <input id="width" type="number" name="width" placeholder="width"/>
+          <input required id="width" type="number" name="width" placeholder="width"/>
           <span>&nbsp;</span>
-          <input id="length" type="number" name="length" placeholder="length"/>
+          <input required id="length" type="number" name="length" placeholder="length"/>
       </label>
 
       <label>
@@ -111,13 +111,13 @@
       </label>
 
       <label>
-          <span>Max Budget:</span>
-          <input id="maxBudget" type="number" name="maxBudget" />
+          <span>Max Budget :</span>
+          <input required id="maxBudget" type="number" name="maxBudget" />
       </label>  
 
       <label>
           <span>Completion Date :</span>
-          <input id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
+          <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
       </label>
 
       <label>
@@ -127,12 +127,12 @@
 
       <label>
               <span>&nbsp;</span>
-              <input type="button" class="button" value="Send" />
-        </label>
+              <input type="submit" class="button" value="Send" />
+      </label>
     </form>
   </body>
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script language="javascript" type="text/javascript" src="controller.js"></script>
   <script language="javascript" type="text/javascript" src="jquery.js"></script>
   <script language="javascript" type="text/javascript" src="parsley.js"></script>
+  <script language="javascript" type="text/javascript" src="controller.js"></script>
 </html>
