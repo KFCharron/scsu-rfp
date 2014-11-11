@@ -2,10 +2,10 @@
 .dark-matter {
     margin-left: auto;
     margin-right: auto;
-    max-width: 500px;
+    max-width: 700px;
     background: #555;
     padding: 20px 30px 20px 30px;
-    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #D3D3D3;
     text-shadow: 1px 1px 1px #444;
     border: none;
@@ -13,11 +13,18 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
 }
+
+body {
+    background-image: url("webMockupBackgroundOnly.jpg");
+    background-size: cover;
+}
+
 .dark-matter h1 {
     padding: 0px 0px 10px 40px;
     display: block;
     border-bottom: 1px solid #444;
     margin: -10px -30px 30px -30px;
+    color: #6DC593;
 }
 .dark-matter h1>span {
     display: block;
@@ -27,17 +34,23 @@
     display: block;
     margin: 0px 0px 5px;
 }
-.dark-matter label>span {
+.dark-matter label>span, #special {
     float: left;
-    width: 20%;
+    width: 25%;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 15px;
     margin-top: 10px;
     font-weight: bold;
 }
+
+.dark-matter input[type="radio"], .dark-matter input[type="checkbox"]{
+  display: inline-block;
+  margin-top: 10px;
+}
+
 .dark-matter input[type="text"], .dark-matter input[type="email"], 
 .dark-matter textarea, .dark-matter select, .dark-matter input[type="tel"],
-.dark-matter input[type="number"]{
+.dark-matter input[type="number"], .dark-matter input[type="date"] {
     border: none;
     color: #525252;
     height: 25px;
@@ -92,6 +105,14 @@
     background-color: #EBEBEB;
 }
 
+.dark-matter legend{
+  font: 18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFCC02;
+  font-weight: bold;
+
+
+}
+
 /* #### Parsley Stuff #### */
 
 input.parsley-success,
@@ -111,10 +132,27 @@ textarea.parsley-error {
 }
 
 .parsley-errors-list {
+
+  /* these control the look of each error message when 
+     input fails validation */
+
+  /*color: #B94A48;*/
+  /*background-color: #F2DEDE;*/
+  text-align: right;
+  display: inline-block;
+  color: red;
+  background-color: white;
+  border: 1px solid #EED3D7;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 3px;
+  padding: 3px;
+
+  /** -----------------------*/
+  /*
   margin: 2px 0 3px 0;
-  padding: 0;
+  padding: 0;*/
   list-style-type: none;
-  font-size: 0.9em;
+  /*font-size: 0.9em;*/
   line-height: 0.9em;
   opacity: 0;
   -moz-opacity: 0;

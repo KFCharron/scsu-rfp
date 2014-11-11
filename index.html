@@ -42,13 +42,6 @@
           <input required id="city" type="text" name="city" placeholder="Your city" />
       </label>
 
-      <!-- this needs to be a selection with all 50 state, will do this later on 
-      <label>
-          <span>State :</span>
-          <input id="state" type="text" name="state" placeholder="state" />
-      </label> -->
-
-
       <legend>Classroom Information</legend>
       <br>
       <label>
@@ -62,67 +55,64 @@
       </label>
 
       <label>
-          <span>Classroom dimensions: </span>
+          <span>Class height:</span>
           <input required id="height" type="number" name="height" placeholder="height"/>
-          <span>&nbsp;</span>
+      </label>
+
+      <label>
+          <span>Class width:</span>
           <input required id="width" type="number" name="width" placeholder="width"/>
-          <span>&nbsp;</span>
+      </label>
+
+      <label>
+          <span>Class length:</span>
           <input required id="length" type="number" name="length" placeholder="length"/>
       </label>
 
-      <label>
-          <span>Classroom style: </span>
-          <br>
-          <input type="radio" name="classroomStyle" value="lectureHall">Lecture Hall
-          <input type="radio" name="classroomStyle" value="traditional">Traditional   
-      </label>  
-      <br>
-      <label>
-          <span>Instructor Podium :</span>
-          <br>
-          <input type="checkbox" name="instuctorPodium" value="mac">Mac
-          <input type="checkbox" name="instuctorPodium" value="pc">PC
-      </label>
+      <lable id="special">Classroom Style:</lable>
+        <input type="radio" name="clasroomStyle" value="lectureHall" />Lecture Hall
+        <input type="radio" name="clasroomStyle" value="traditional" checked/>Traditional
+        <input type="radio" name="clasroomStyle" value="handsOn" />Hands On
+        <br />
+
+      <lable id="special">Instructor Podium:</lable>
+        <input type="checkbox" name="instructorPodium" value="mac" />Mac
+        <input type="checkbox" name="instructorPodium" value="pc" checked/>PC
+        <br />
+
+      <lable id="special">Projection System:</lable>
+        <input type="checkbox" name="projectionSystem" value="ceiling" />Ceiling mounted
+        <input type="checkbox" name="projectionSystem" value="flatpanel" checked/>Flatpanel
+        <input type="checkbox" name="projectionSystem" value="Chalkboard" />Chalkboard
+        <input type="checkbox" name="projectionSystem" value="dryerase" />Dry Erase
+        <br />
+
+      <lable id="special">Multimedia System:</lable>
+        <input type="checkbox" name="mediaSystem" value="vcr" />VCR
+        <input type="checkbox" name="mediaSystem" value="dvd" checked/>DVD
+        <input type="checkbox" name="mediaSystem" value="blueray" />Blue-Ray
+        <br />
+
+    
+      <lable id="special">High Quality Audio:</lable>
+        <input type="radio" name="highQualityAudio" value="yes" checked/>Yes
+        <input type="radio" name="highQualityAudio" value="no" />No
+
 
       <label>
           <br>
-          <span>Projection System:</span>
-          <input type="checkbox" name="projectionSystem" value="ceiling">Ceiling mounted
-          <input type="checkbox" name="projectionSystem" value="flatPanel">Flatpanel
-          <br>
-          <input type="checkbox" name="projectionSystem" value="chalkboard">Chalkboard
-          <input type="checkbox" name="projectionSystem" value="dryerase">Dry Erase
-      </label>
-
-      <label>
-          <span>Multimedia System :</span>
-          <br>
-          <input type="checkbox" name="multSystem" value="vcr">VCR
-          <input type="checkbox" name="multSystem" value="dvd">DVD
-          <input type="checkbox" name="multSystem" value="blueray">Blue-Ray
-      </label>
-
-      <label>
-          <br>
-          <span>High Quality Audio :</span>
-          <br>
-          <input type="radio" name="highQualityAudio" value="yes">Yes
-          <input type="radio" name="highQualityAudio" value="no">No
-      </label>
-
-      <label>
           <span>Max Budget :</span>
           <input required id="maxBudget" type="number" name="maxBudget" />
       </label>  
 
       <label>
-          <span>Completion Date :</span>
+          <span>Completion Date:</span>
           <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
       </label>
 
       <label>
-          <span>Summary :</span>
-          <textarea id="summary" name="summary" placeholder="Description of the RFP ..."></textarea>
+          <span>Summary:</span>
+          <textarea id="summary" type="textarea" name="summary" placeholder="Description of the RFP ..."></textarea>
       </label>
 
       <label>
