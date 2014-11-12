@@ -9,116 +9,118 @@
       <h1>SCSU Request For Proposal
         <span> Please fill out the entire form.</span>
       </h1>
-
-      <legend>Contact Information</legend>
-      <br>
-      <label>
-          <span>First Name :</span>
-          <input required id="firstName" type="text" name="firstName" placeholder="Your First Name" />
-      </label>
-
-      <label>
-          <span>Last Name :</span>
-          <input required id="lastName" type="text" name="lastName" placeholder="Your Last Name" />
-      </label>
-
-      <label>
-          <span>E-mail Address :</span>
-          <input required id="emailAddress" type="email" name="emailAddress" placeholder="Your email address" />
-      </label>
-
-      <label>
-          <span>Phone Number :</span>
-          <input required type="number" id="phoneNumber" name="phoneNumber" placeholder="Your telephone Number" />
-      </label>
-
-      <label>
-          <span>Street Address :</span>
-          <input required id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
-      </label>
-
-      <label>
-          <span>City :</span>
-          <input required id="city" type="text" name="city" placeholder="Your city" />
-      </label>
-
-      <legend>Classroom Information</legend>
-      <br>
-      <label>
-          <span>Number of classrooms: </span>
-          <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" />
-      </label>
-
-      <label>
-          <span>Number of seats: </span>
-          <input required id="numberSeats" min="1" type="number" name="numberSeats" />
-      </label>
-
-      <label>
-          <span>Class height:</span>
-          <input required id="height" type="number" min="1" name="height" placeholder="height"/>
-      </label>
-
-      <label>
-          <span>Class width:</span>
-          <input required id="width" type="number" min="1" name="width" placeholder="width"/>
-      </label>
-
-      <label>
-          <span>Class length:</span>
-          <input required id="length" type="number" min="1" name="length" placeholder="length"/>
-      </label>
-
-      <label class="special">Classroom Style:</label>
-        <input type="radio" name="clasroomStyle" value="lectureHall" />Lecture Hall
-        <input type="radio" name="clasroomStyle" value="traditional" checked/>Traditional
-        <input type="radio" name="clasroomStyle" value="handsOn" />Hands On
-        <br />
-
-      <label class="special">Instructor Podium:</label>
-        <input type="checkbox" name="instructorPodium" value="mac" />Mac
-        <input type="checkbox" name="instructorPodium" value="pc" checked/>PC
-        <br />
-
-      <label class="special">Projection System:</label>
-        <input type="checkbox" name="projectionSystem" value="ceiling" />Ceiling mounted
-        <input type="checkbox" name="projectionSystem" value="flatpanel" checked/>Flatpanel
-        <input type="checkbox" name="projectionSystem" value="Chalkboard" />Chalkboard
-        <input type="checkbox" name="projectionSystem" value="dryerase" />Dry Erase
-        <br />
-
-      <label class="special">Multimedia System:</label>
-        <input type="checkbox" name="mediaSystem" value="vcr" />VCR
-        <input type="checkbox" name="mediaSystem" value="dvd" checked/>DVD
-        <input type="checkbox" name="mediaSystem" value="blueray" />Blue-Ray
-        <br />
-
-    
-      <label class="special">High Quality Audio:</label>
-        <input type="radio" name="highQualityAudio" value="yes" checked/>Yes
-        <input type="radio" name="highQualityAudio" value="no" />No
-
-
-      <label>
+        <fieldset>
+          <legend>Contact Information</legend>
           <br>
-          <span>Max Budget :</span>
-          <input required id="maxBudget" type="number" name="maxBudget" />
-      </label>  
+          <label>
+              <span>First Name :</span>
+              <input required id="firstName" type="text" name="firstName" placeholder="Your First Name" />
+          </label>
 
-      <label>
-          <span>Completion Date :</span>
-          <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
-      </label>
+          <label>
+              <span>Last Name :</span>
+              <input required id="lastName" type="text" name="lastName" placeholder="Your Last Name" />
+          </label>
 
-      <label>
-          <span>Summary :</span>
-          <textarea id="summary" type="textarea" name="summary" placeholder="Description of the RFP ..."></textarea>
-      </label>
+          <label>
+              <span>E-mail Address :</span>
+              <input required id="emailAddress" type="email" name="emailAddress" placeholder="Your email address" />
+          </label>
 
-      <label>
-              <span>&nbsp;</span>
-              <input type="submit" class="button" value="Send" />
-      </label>
+          <label>
+              <span>Phone Number :</span>
+              <input required type="number" id="phoneNumber" name="phoneNumber" placeholder="Your telephone Number" />
+          </label>
+
+          <label>
+              <span>Street Address :</span>
+              <input required id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
+          </label>
+
+          <label>
+              <span>City :</span>
+              <input required id="city" type="text" name="city" placeholder="Your city" />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Classroom Information</legend>
+          <br>
+          <label>
+              <span>Number of classrooms: </span>
+              <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" />
+          </label>
+
+          <label>
+              <span>Number of seats: </span>
+              <input required id="numberSeats" min="1" type="number" name="numberSeats" />
+          </label>
+
+          <label>
+              <span>Class height:</span>
+              <input required id="height" type="number" min="1" name="height" placeholder="height"/>
+          </label>
+
+          <label>
+              <span>Class width:</span>
+              <input required id="width" type="number" min="1" name="width" placeholder="width"/>
+          </label>
+
+          <label>
+              <span>Class length:</span>
+              <input required id="length" type="number" min="1" name="length" placeholder="length"/>
+          </label>
+
+          <label class="special">Classroom Style:</label>
+            <input type="radio" name="clasroomStyle" value="lectureHall" />Lecture Hall
+            <input type="radio" name="clasroomStyle" value="traditional" checked/>Traditional
+            <input type="radio" name="clasroomStyle" value="handsOn" />Hands On
+            <br />
+
+          <label class="special">Instructor Podium:</label>
+            <input type="checkbox" name="instructorPodium" value="mac" />Mac
+            <input type="checkbox" name="instructorPodium" value="pc" checked/>PC
+            <br />
+
+          <label class="special">Projection System:</label>
+            <input type="checkbox" name="projectionSystem" value="ceiling" />Ceiling mounted
+            <input type="checkbox" name="projectionSystem" value="flatpanel" checked/>Flatpanel
+            <input type="checkbox" name="projectionSystem" value="Chalkboard" />Chalkboard
+            <input type="checkbox" name="projectionSystem" value="dryerase" />Dry Erase
+            <br />
+
+          <label class="special">Multimedia System:</label>
+            <input type="checkbox" name="mediaSystem" value="vcr" />VCR
+            <input type="checkbox" name="mediaSystem" value="dvd" checked/>DVD
+            <input type="checkbox" name="mediaSystem" value="blueray" />Blue-Ray
+            <br />
+
+
+          <label class="special">High Quality Audio:</label>
+            <input type="radio" name="highQualityAudio" value="yes" checked/>Yes
+            <input type="radio" name="highQualityAudio" value="no" />No
+
+
+          <label>
+              <br>
+              <span>Max Budget :</span>
+              <input required id="maxBudget" type="number" name="maxBudget" />
+          </label>
+
+          <label>
+              <span>Completion Date :</span>
+              <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
+          </label>
+
+          <label>
+              <span>Summary :</span>
+              <textarea id="summary" name="summary" placeholder="Description of the RFP ..."></textarea>
+          </label>
+
+          <label>
+                  <span>&nbsp;</span>
+                  <input type="submit" class="button" value="Send" />
+          </label>
+        </fieldset>
     </form>
   </body>
   <link rel="stylesheet" type="text/css" href="style.css">

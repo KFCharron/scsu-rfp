@@ -1,5 +1,3 @@
-console.log("JavaScript File Successfully Loaded.");
-
 $.fn.serializeObject = function()
 {
     var o = {};
