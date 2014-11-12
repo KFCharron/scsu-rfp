@@ -29,11 +29,11 @@
 
       <label>
           <span>Phone Number :</span>
-          <input required id="phoneNumber" type="tel" name="phoneNumber" placeholder="Your telephone Number" />
+          <input required type="number" id="phoneNumber" name="phoneNumber" placeholder="Your telephone Number" />
       </label>
 
       <label>
-          <span>Streen Address :</span>
+          <span>Street Address :</span>
           <input required id="streetAddress" type="text" name="streetAddress" placeholder="Your street address" />
       </label>
 
@@ -46,55 +46,55 @@
       <br>
       <label>
           <span>Number of classrooms: </span>
-          <input required id="numberClassrooms" type="number" name="numberClassrooms" />
+          <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" />
       </label>
 
       <label>
           <span>Number of seats: </span>
-          <input required id="numberSeats" type="number" name="numberSeats" />
+          <input required id="numberSeats" min="1" type="number" name="numberSeats" />
       </label>
 
       <label>
           <span>Class height:</span>
-          <input required id="height" type="number" name="height" placeholder="height"/>
+          <input required id="height" type="number" min="1" name="height" placeholder="height"/>
       </label>
 
       <label>
           <span>Class width:</span>
-          <input required id="width" type="number" name="width" placeholder="width"/>
+          <input required id="width" type="number" min="1" name="width" placeholder="width"/>
       </label>
 
       <label>
           <span>Class length:</span>
-          <input required id="length" type="number" name="length" placeholder="length"/>
+          <input required id="length" type="number" min="1" name="length" placeholder="length"/>
       </label>
 
-      <lable id="special">Classroom Style:</lable>
+      <label class="special">Classroom Style:</label>
         <input type="radio" name="clasroomStyle" value="lectureHall" />Lecture Hall
         <input type="radio" name="clasroomStyle" value="traditional" checked/>Traditional
         <input type="radio" name="clasroomStyle" value="handsOn" />Hands On
         <br />
 
-      <lable id="special">Instructor Podium:</lable>
+      <label class="special">Instructor Podium:</label>
         <input type="checkbox" name="instructorPodium" value="mac" />Mac
         <input type="checkbox" name="instructorPodium" value="pc" checked/>PC
         <br />
 
-      <lable id="special">Projection System:</lable>
+      <label class="special">Projection System:</label>
         <input type="checkbox" name="projectionSystem" value="ceiling" />Ceiling mounted
         <input type="checkbox" name="projectionSystem" value="flatpanel" checked/>Flatpanel
         <input type="checkbox" name="projectionSystem" value="Chalkboard" />Chalkboard
         <input type="checkbox" name="projectionSystem" value="dryerase" />Dry Erase
         <br />
 
-      <lable id="special">Multimedia System:</lable>
+      <label class="special">Multimedia System:</label>
         <input type="checkbox" name="mediaSystem" value="vcr" />VCR
         <input type="checkbox" name="mediaSystem" value="dvd" checked/>DVD
         <input type="checkbox" name="mediaSystem" value="blueray" />Blue-Ray
         <br />
 
     
-      <lable id="special">High Quality Audio:</lable>
+      <label class="special">High Quality Audio:</label>
         <input type="radio" name="highQualityAudio" value="yes" checked/>Yes
         <input type="radio" name="highQualityAudio" value="no" />No
 
@@ -106,12 +106,12 @@
       </label>  
 
       <label>
-          <span>Completion Date:</span>
+          <span>Completion Date :</span>
           <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
       </label>
 
       <label>
-          <span>Summary:</span>
+          <span>Summary :</span>
           <textarea id="summary" type="textarea" name="summary" placeholder="Description of the RFP ..."></textarea>
       </label>
 
