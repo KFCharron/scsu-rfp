@@ -20,6 +20,9 @@ $.fn.serializeObject = function()
 $(function() {
     $('form').submit(function() {
         var json = JSON.stringify($('form').serializeObject());
+        xmlhttp.open("POST", /*TODO URL*/"", true);
+        xmlhttp.setRequestHeader("",""/*TODO*/);
+        xmlhttp.send(json);
         // TODO send json via http post
         return false;
     });
