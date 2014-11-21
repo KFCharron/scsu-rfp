@@ -5,7 +5,7 @@
     <title>Request For Proposal</title>
   </head>
   <body>
-    <form id="form" action="" method="post" class="dark-matter" data-parsley-validate>
+    <form id="form" action="mongo.php" method="post" class="dark-matter" data-parsley-validate>
       <h1>SCSU Request For Proposal
         <span> Please fill out the entire form.</span>
       </h1>
@@ -118,7 +118,7 @@
 
           <label>
                   <span>&nbsp;</span>
-                  <input type="submit" class="button" value="Send" />
+                  <input type="submit" name="phpsub" class="button" value="Send" />
           </label>
         </fieldset>
     </form>
