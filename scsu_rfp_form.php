@@ -15,7 +15,7 @@
     $errinputTotalClassrooms = "";
     $errinputTotalSeats = "";
     $errinputClassHeight = "";
-    $errinputClassWidth = "";
+   	$errinputClassWidth = "";
     $errinputClassLength = "";
     $errinputClassroomStyle = "";
     $errinputInstructPodium = "";
@@ -167,11 +167,12 @@
 </head>
 
 <body>
-	<div class="container-fluid">
+	<div class="container">
     <!-- I just needed to get some space between the top of the page and the first element -->
     <div class="row"><h3></h3></div>
 		<form id="myform" class="form-horizontal" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
+	<fieldset>
+	<legend>Contact Information</legend>
         <div class="form-group">
             <label for="inputFirst" class="control-label col-xs-2">First Name</label>
             <div class="col-xs-4">
@@ -289,7 +290,9 @@
                 <span class="help-inline"><?php echo $errinputZipCode;?></span>
             </div>
         </div>
-
+	</fieldset>
+        <fieldset>
+        <legend>Classroom Information</legend>
         <div class="form-group">
             <label for="inputTotalClassrooms" class="control-label col-xs-2">Total Classrooms</label>
             <div class="col-xs-4">
@@ -409,6 +412,7 @@
             </div>
         </div>
 	    </form>	
+    </fieldset>
 	</div>
     <!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
