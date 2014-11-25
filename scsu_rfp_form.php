@@ -20,6 +20,7 @@
     $errinputClassroomStyle = "";
     $errinputInstructPodium = "";
     $errinputProjectionSystem = "";
+    $errinputAudioQuality = "";
     $errinputBudget = "";
     $errinputCompDate = "";
     $errinputSummary = "";
@@ -76,6 +77,9 @@
               || $_POST["inputProjectionSystem"] === "dryErase") === 0){
           $errCompAdvertising = "*Please select at least one projection system";          
             }
+        // validation for audio quality
+        if(($_POST["inputAudioQuality"] === "true" || $_POST["inputAudioQuality"] === "false") === 0)
+          $errinputBudget = "* select true or false";    
         // validation for max budget
         if(preg_match("/^[0-9 _.,\"]+$/", $_POST["inputBudget"]) === 0)
           $errinputBudget = "* enter a valid budget.";
@@ -94,7 +98,7 @@
 	if($errinputFirst=="" and $errinputLast=="" and $errinputSalon=="" and $errinputAddress=="" and $errinputCity=="" and $errinputState=="" 
 		and $errinputZipCode=="" and $errinputPhone=="" and $errinputEmail== "" and $errinputTotalClassrooms=="" and $errinputTotalSeats==""
         and $errinputClassHeight=="" and $errinputClassWidth=="" and $errinputClassLength=="" and $errinputClassroomStyle=="" and $errinputInstructPodium==""
-        and $errinputProjectionSystem=="" and $errinputBudget=="" and $errinputCompDate=="" and $errinputSummary==""
+        and $errinputProjectionSystem=="" and $inputAudioQuality=="" and $errinputBudget=="" and $errinputCompDate=="" and $errinputSummary==""
         and $_SERVER["REQUEST_METHOD"] == "POST"){
 
 		// variables with validated data
@@ -114,34 +118,20 @@
     	$inputClassroomStyle = $_POST["inputClassroomStyle"];
         $inputInstructPodium = $_POST["inputInstructPodium"];
         $inputProjectionSystem = $_POST["inputProjectionSystem"];
+        $inputAudioQuality = $_POST["inputAudioQuality"];
         $inputBudget = $_POST["inputBudget"];
         $inputCompDate = $_POST["inputCompDate"];
         $inputSummary = $_POST["inputSummary"];
 
-        // uncomment to see what the variables look like
-        // just keep in mind this just puts everything in one big ass string
-        // there are no delimeters.
-        /*
-        echo $inputFirst; 
-        echo $inputLast;
-        echo $inputEmail; 
-        echo $inputPhone; 
-        echo $inputAddress; 
-        echo $inputCity;
-        echo $inputState; 
-        echo $inputZipCode; 
-        echo $inputTotalClassrooms;
-        echo $inputTotalSeats;
-        echo $inputClassHeight;
-        echo $inputClassWidth;
-        echo $inputClassLength;
-        echo $inputClassroomStyle;
-        echo $inputInstructPodium;
-        echo $inputProjectionSystem;
-        echo $inputBudget;
-        echo $inputCompDate;
-        echo $inputSummary;
-        */
+
+
+        //$arr=array('a' => 1, 'b' => 2, 'c'=> 3);
+        $arr=array('purpose' => $inputClassroomStyle, 'podiumType' => $inputInstructPodium, 'projection' => $inputInstructPodium,
+                   'hqAudio' => $inputAudioQuality, 'classNum' => $inputTotalClassrooms, 'seats' => $inputTotalSeats,
+                   'length' => $inputClassLength, 'width' => $inputClassWidth, 'height' => $inputClassHeight, 'budget' => $inputBudget,
+                   'inputCompDate' => $inputCompDate);
+        $jsonString = json_encode($arr);
+        echo $jsonString;
 
 
         // TODO: figure out if  we need to re-direct to another page after the RFP has 
@@ -380,6 +370,21 @@
               </label>
             </div>       
         </div>
+
+        <!-- TODO: need to put span element for errors -->
+        <div class="form-group">
+            <label for="inputAudioQuality" class="control-label col-xs-2">High Quality Audio</label>
+            <div class="col-xs-4">
+              <label class="radio-inline">
+                <input type="radio" name="inputAudioQuality"  value="true" checked> True
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inputAudioQuality" value="false"> False
+              </label>
+            </div>       
+        </div>
+
+
 
         <div class="form-group">
             <label for="inputBudget" class="control-label col-xs-2">Max Budget</label>
