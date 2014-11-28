@@ -3,29 +3,33 @@
      the input. It populates the error variables if validation fails and 
      leaves them blank otherwise.
   */
-	// initialize error variables
-	$errinputFirst = "";
-	$errinputLast = "";
-	$errinputEmail    = "";
-	$errinputPhone = "";
-	$errinputAddress = "";
-	$errinputCity = "";
-	$errinputState = "";
-	$errinputZipCode = "";
-    $errinputTotalClassrooms = "";
-    $errinputTotalSeats = "";
-    $errinputClassHeight = "";
-   	$errinputClassWidth = "";
-    $errinputClassLength = "";
-    $errinputClassroomStyle = "";
-    $errinputInstructPodium = "";
-    $errinputProjectionSystem = "";
-    $errinputAudioQuality = "";
-    $errinputBudget = "";
-    $errinputCompDate = "";
-    $errinputSummary = "";
+	
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        // initialize error variables
+        $errinputFirst = "";
+        $errinputLast = "";
+        $errinputEmail    = "";
+        $errinputPhone = "";
+        $errinputAddress = "";
+        $errinputCity = "";
+        $errinputState = "";
+        $errinputZipCode = "";
+        $errinputTotalClassrooms = "";
+        $errinputTotalSeats = "";
+        $errinputClassHeight = "";
+        $errinputClassWidth = "";
+        $errinputClassLength = "";
+        $errinputClassroomStyle = "";
+        $errinputInstructPodium = "";
+        $errinputProjectionSystem = "";
+        $errinputAudioQuality = "";
+        $errinputBudget = "";
+        $errinputCompDate = "";
+        $errinputSummary = "";
+
+        
 		// First name validation
 		if(preg_match("/^(?=[^ .-])[a-zA-Z -.]+(?<=[^ ])$/", $_POST["inputFirst"]) === 0)
 			$errinputFirst = "* must enter only letters.";
