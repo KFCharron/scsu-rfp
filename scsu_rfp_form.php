@@ -95,7 +95,7 @@
 <?PHP 
   //This script executes only when all the error variables are empty, a.k.a validation is OK.  
 
-	if($errinputFirst=="" and $errinputLast=="" and $errinputSalon=="" and $errinputAddress=="" and $errinputCity=="" and $errinputState=="" 
+	if($errinputFirst=="" and $errinputLast=="" and $errinputAddress=="" and $errinputCity=="" and $errinputState=="" 
 		and $errinputZipCode=="" and $errinputPhone=="" and $errinputEmail== "" and $errinputTotalClassrooms=="" and $errinputTotalSeats==""
         and $errinputClassHeight=="" and $errinputClassWidth=="" and $errinputClassLength=="" and $errinputClassroomStyle=="" and $errinputInstructPodium==""
         and $errinputProjectionSystem=="" and $inputAudioQuality=="" and $errinputBudget=="" and $errinputCompDate=="" and $errinputSummary==""
