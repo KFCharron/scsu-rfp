@@ -14,53 +14,86 @@
           <br>
           <label>
               <span>Name :</span>
-              <input required id="inputName" type="text" name="inputName" placeholder="Your First Name" />
+              <input required id="inputName" type="text" name="inputName" placeholder="Your First Name" data-parsley-error-message="Enter your name" />
           </label>
 
           <label>
               <span>E-mail Address :</span>
-              <input required id="inputEmail" type="email" name="inputEmail" placeholder="Your email address" />
+              <input required id="inputEmail" type="email" name="inputEmail" placeholder="Your email address" data-parsley-error-message="Enter valid email"></input>
           </label>
 
           <label>
               <span>Phone Number :</span>
-              <input required type="number" id="inputPhone" name="inputPhone" placeholder="Your telephone Number" />
+              <input required type="number" id="inputPhone" name="inputPhone" placeholder="Your telephone Number" data-parsley-error-message="Enter valid phone number"/>
           </label>
 
           <label>
               <span>Address :</span>
-              <textarea required id="inputAddress" type="text" name="inputAddress" placeholder="Your street address"></textarea>
+              <textarea required id="inputAddress" type="text" name="inputAddress" placeholder="Your street address" data-parsley-error-message="Enter valid address"></textarea>
           </label>
         </fieldset>
 
 
-
         <fieldset>
-          <legend>Classroom Information</legend>
+          <legend>Loaded classrooms</legend>
           <br>
+
+          <div id="users-contain" class="ui-widget">
+          <h4>
+            <span> Please fill out the entire form.</span>
+          </h4>
+          <table id="users" class="ui-widget ui-widget-content">
+            <thead>
+              <tr class="ui-widget-header ">
+                <th>Classroom</th>
+                <th>Seats</th>
+                <th>Height</th>
+                <th>Length</th>
+                <th>Width</th>
+              </tr>
+            </thead>
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>24</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+          <br />
+          
           <label>
+                  <span>&nbsp;</span>
+                  <input name="phpsub" class="button" value="Add Classroom" onclick="addClass()" />
+          </label>
+
+
+           <label>
               <span>Number of classrooms: </span>
-              <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" />
+              <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" data-parsley-error-message="Enter number of classrooms"/>
           </label>
 
           <label>
               <span>Number of seats: </span>
-              <input required id="numberSeats" min="1" type="number" name="numberSeats" />
+              <input required id="numberSeats" min="1" type="number" name="numberSeats" data-parsley-error-message="Enter number of classrooms"/>
           </label>
 
           <label>
               <span>Class height:</span>
-              <input required id="height" type="number" min="1" name="height" placeholder="height"/>
+              <input required id="height" type="number" min="1" name="height" placeholder="height" data-parsley-error-message="Enter height"/>
           </label>
 
           <label>
               <span>Class width:</span>
-              <input required id="width" type="number" min="1" name="width" placeholder="width"/>
+              <input required id="width" type="number" min="1" name="width" placeholder="width" data-parsley-error-message="Enter width"/>
           </label>
 
           <label>
               <span>Class length:</span>
-              <input required id="length" type="number" min="1" name="length" placeholder="length"/>
+              <input required id="length" type="number" min="1" name="length" placeholder="length" data-parsley-error-message="Enter length"/>
           </label>
 
           <label>
@@ -102,18 +135,18 @@
             </select>
           </label>
 
-          <label>
-              <br>
-              <span>Max Budget :</span>
-              <input required id="maxBudget" type="number" name="maxBudget" />
-          </label>
+
+          <label for="amount">
+            <span>Budget: </span>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider"></div>
+          </label>   
+          <br>              
 
           <label>
               <span>Completion Date :</span>
-              <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
+              <input type="text" id="datepicker"/>
           </label>
-
-
 
           <label>
               <span>Summary :</span>
@@ -128,8 +161,41 @@
     </form>
   </body>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="jquery-ui.css">
   <script language="javascript" type="text/javascript" src="jquery.js"></script>
   <script language="javascript" type="text/javascript" src="parsley.js"></script>
-  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script language="javascript" type="text/javascript" src="jquery-ui.js"></script>
   <script language="javascript" type="text/javascript" src="controller.js"></script>
+  <script type="text/javascript">
+  // probably not suppose to go here
+    $(function() {
+   $( "#datepicker" ).datepicker();
+   });
+  </script>
+  <script>
+   $(function() {
+  $( "#slider" ).slider({
+  value:100000,
+  min: 0,
+  max: 1000000,
+  step: 1000,
+  slide: function( event, ui ) {
+  $( "#amount" ).val( "$" + ui.value );
+  }
+  });
+  $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+  });
+  </script>
+
+  <script type="text/javascript">
+  function addClass(){
+    //alert("hello");
+     $( "#users tbody" ).append( "<tr>" +
+    "<td>" + "999" + "</td>" +
+    "<td>" + "999" + "</td>" +
+    "<td>" + "999" + "</td>" +
+    "</tr>" );
+  }
+  </script>
+
 </html>

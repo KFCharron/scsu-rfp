@@ -32,7 +32,7 @@ body {
 }
 .dark-matter label {
     display: block;
-    margin: 0px 0px 5px 100px;
+    margin: 0px 0px 5px 10px;
 }
 
 .dark-matter label>span, .special{
@@ -45,9 +45,20 @@ body {
     
 }
 
+.dark-matter #slider {
+  width: 50%;
+  margin-left: 28%;
+}
+
+.dark-matter #users {
+  width: 75%;
+  margin: auto; 
+}
+
 .dark-matter input[type="text"], .dark-matter input[type="email"], 
-.dark-matter textarea, .dark-matter select,
-.dark-matter input[type="number"], .dark-matter input[type="date"] {
+.dark-matter textarea, .dark-matter select, 
+.dark-matter input[type="number"], .dark-matter input[type="date"],
+.dark-matter input[type="range"]{
     border: none;
     color: #525252;
     height: 25px;
@@ -170,3 +181,6 @@ textarea.parsley-error {
   -moz-border-radius: 20px 100px 100px 20px;
   -webkit-border-radius: 20px 100px 100px 20px;
 }
+
+
+
