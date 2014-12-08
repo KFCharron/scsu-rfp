@@ -38,39 +38,6 @@
           <legend>Loaded classrooms</legend>
           <br>
 
-          <div id="users-contain" class="ui-widget">
-          <h4>
-            <span> Please fill out the entire form.</span>
-          </h4>
-          <table id="users" class="ui-widget ui-widget-content">
-            <thead>
-              <tr class="ui-widget-header ">
-                <th>Classroom</th>
-                <th>Seats</th>
-                <th>Height</th>
-                <th>Length</th>
-                <th>Width</th>
-              </tr>
-            </thead>
-          <tbody>
-          <tr>
-            <td>1</td>
-            <td>24</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-          </tr>
-          </tbody>
-          </table>
-          </div>
-          <br />
-          
-          <label>
-                  <span>&nbsp;</span>
-                  <input name="phpsub" class="button" value="Add Classroom" onclick="addClass()" />
-          </label>
-
-
            <label>
               <span>Number of classrooms: </span>
               <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" data-parsley-error-message="Enter number of classrooms"/>
@@ -186,16 +153,4 @@
   $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
   });
   </script>
-
-  <script type="text/javascript">
-  function addClass(){
-    //alert("hello");
-     $( "#users tbody" ).append( "<tr>" +
-    "<td>" + "999" + "</td>" +
-    "<td>" + "999" + "</td>" +
-    "<td>" + "999" + "</td>" +
-    "</tr>" );
-  }
-  </script>
-
 </html>
