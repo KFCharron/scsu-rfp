@@ -45,11 +45,6 @@ body {
     
 }
 
-.dark-matter input[type="radio"], .dark-matter input[type="checkbox"]{
-  display: inline-block;
-  margin: 4px;
-}
-
 .dark-matter input[type="text"], .dark-matter input[type="email"], 
 .dark-matter textarea, .dark-matter select,
 .dark-matter input[type="number"], .dark-matter input[type="date"] {
@@ -86,7 +81,7 @@ body {
 .dark-matter textarea{
     height:100px;
     padding: 5px 0px 0px 5px;
-    width: 60%;
+    width: 50%;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

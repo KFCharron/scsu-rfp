@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Request For Proposal</title>
+  </head>
+  <body>
+    <form id="form" action="mongo.php" method="post" class="dark-matter" data-parsley-validate>
+      <h1>SCSU Request For Proposal
+        <span> Please fill out the entire form.</span>
+      </h1>
+        <fieldset>
+          <legend>Contact Information</legend>
+          <br>
+          <label>
+              <span>Name :</span>
+              <input required id="inputName" type="text" name="inputName" placeholder="Your First Name" />
+          </label>
+
+          <label>
+              <span>E-mail Address :</span>
+              <input required id="inputEmail" type="email" name="inputEmail" placeholder="Your email address" />
+          </label>
+
+          <label>
+              <span>Phone Number :</span>
+              <input required type="number" id="inputPhone" name="inputPhone" placeholder="Your telephone Number" />
+          </label>
+
+          <label>
+              <span>Address :</span>
+              <textarea required id="inputAddress" type="text" name="inputAddress" placeholder="Your street address"></textarea>
+          </label>
+        </fieldset>
+
+
+
+        <fieldset>
+          <legend>Classroom Information</legend>
+          <br>
+          <label>
+              <span>Number of classrooms: </span>
+              <input required id="numberClassrooms" type="number" min="1" name="numberClassrooms" />
+          </label>
+
+          <label>
+              <span>Number of seats: </span>
+              <input required id="numberSeats" min="1" type="number" name="numberSeats" />
+          </label>
+
+          <label>
+              <span>Class height:</span>
+              <input required id="height" type="number" min="1" name="height" placeholder="height"/>
+          </label>
+
+          <label>
+              <span>Class width:</span>
+              <input required id="width" type="number" min="1" name="width" placeholder="width"/>
+          </label>
+
+          <label>
+              <span>Class length:</span>
+              <input required id="length" type="number" min="1" name="length" placeholder="length"/>
+          </label>
+
+          <label>
+            <span>Classroom Style:</span><select name="selection">
+            <option name="clasroomStyle" value="lectureHall" />Lecture Hall</option>
+            <option name="clasroomStyle" value="traditional" checked/>Traditional</option>
+            <option name="clasroomStyle" value="handsOn" />Hands On</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Podium :</span><select name="selection">
+            <option name="instructorPodium" value="mac" >Mac</option>
+            <option name="instructorPodium" value="pc" >PC</option>
+            <option name="instructorPodium" value="instBoth" >Both</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Projection System :</span><select name="selection">
+            <option name="projectionSystem" value="ceiling" >Ceiling mounted</option>
+            <option name="projectionSystem" value="flatpanel" >Flatpanel</option>
+            <option name="projectionSystem" value="Chalkboard">Chalkboard</option>
+            <option name="projectionSystem" value="dryerase">Dry Erase</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Multimedia System:</span><select name="selection">
+            <option name="mediaSystem" value="vcrDVD" >VCR/DVD</option>
+            <option name="mediaSystem" value="blueray" >Blue-Ray</option>
+            </select>
+          </label>
+
+          <label>
+            <span>High Quality Audio:</span><select name="selection">
+            <option name="mediaSystem" value="yesHQA" >Yes</option>
+            <option name="mediaSystem" value="noHQA" >No</option>
+            </select>
+          </label>
+
+          <label>
+              <br>
+              <span>Max Budget :</span>
+              <input required id="maxBudget" type="number" name="maxBudget" />
+          </label>
+
+          <label>
+              <span>Completion Date :</span>
+              <input required id="compDate" type="date" name="compDate" placeholder="mm/dd/yyyy"/>
+          </label>
+
+
+
+          <label>
+              <span>Summary :</span>
+              <textarea id="summary" name="summary" placeholder="Description of the RFP ..."></textarea>
+          </label>
+
+          <label>
+                  <span>&nbsp;</span>
+                  <input type="submit" name="phpsub" class="button" value="Send" />
+          </label>
+        </fieldset>
+    </form>
+  </body>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script language="javascript" type="text/javascript" src="jquery.js"></script>
+  <script language="javascript" type="text/javascript" src="parsley.js"></script>
+  <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+  <script language="javascript" type="text/javascript" src="controller.js"></script>
+</html>

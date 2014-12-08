@@ -15,6 +15,12 @@ $.fn.serializeObject = function()
     return o;
 };
 
+// probably not suppose to go here
+$(function() {
+    $( "#compDate" ).datepicker();
+  });
+
+
 $(function() {
     $('form').submit(function() {
         var json = JSON.stringify($('form').serializeObject());
